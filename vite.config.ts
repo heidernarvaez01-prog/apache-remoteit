@@ -9,7 +9,11 @@ export default defineConfig({
   root: 'HTML',
   // mpa: sin fallback de SPA a index.html — rutas inexistentes deben dar 404 real.
   appType: 'mpa',
-  publicDir: false,
+  // Vite solo rastrea <link>, <img> y <script type="module"> — los <script src>
+  // clásicos (jQuery, GSAP y el resto de assets/js/*.js) y sendemail.php nunca
+  // se copiaban a dist/ en el build de producción aunque funcionaran en `dev`.
+  // publicDir los copia tal cual, preservando la ruta relativa que referencia el HTML.
+  publicDir: 'public',
   build: {
     outDir: '../dist',
     emptyOutDir: true,
