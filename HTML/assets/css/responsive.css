@@ -2,7 +2,7 @@
 
 @media only screen and (max-width: 1400px){
 
-	.journel-two .journel-block_one{
+	.journal-two .journal-block_one{
 		width:25%;
 	}
 
@@ -15,7 +15,7 @@
 	}
 	
 	.single-work_image,
-	.journel-detail_image{
+	.journal-detail_image{
 		padding-right:0px;
 	}
 
@@ -35,7 +35,7 @@
 		padding-right:50px;
 	}
 	
-	.journel-one .journel-block_one {
+	.journal-one .journal-block_one {
 		width: 25%;
 	}
 	
@@ -64,7 +64,7 @@
 		font-size: 120px;
 	}
 	
-	.journel-one .journel-block_one {
+	.journal-one .journal-block_one {
 		width: 33.333%;
 	}
 	
@@ -72,7 +72,7 @@
 		font-size: 16px;
 	}
 	
-	.journel-two .journel-block_one{
+	.journal-two .journal-block_one{
 		width:33.333%;
 	}
 
@@ -147,7 +147,7 @@
 		padding: 20px 30px;
 	}
 	
-	.journel-one .journel-block_one {
+	.journal-one .journal-block_one {
 		width: 50%;
 	}
 	
@@ -184,22 +184,22 @@
 		top:0px;
 	}
 	
-	.journel-two .journel-block_one{
+	.journal-two .journal-block_one{
 		width:50%;
 	}
 	
 	.single-work .column:nth-child(2),
-	.journel-detail .column:nth-child(2){
+	.journal-detail .column:nth-child(2){
 		order:1;
 	}
 	
 	.single-work .column:nth-child(1),
-	.journel-detail .column:nth-child(1){
+	.journal-detail .column:nth-child(1){
 		order:2;
 	}
 	
 	.single-work,
-	.journel-detail{
+	.journal-detail{
 		padding-top:100px;
 	}
 
@@ -214,7 +214,11 @@
 }
 
 @media only screen and (max-width: 767px){
-	
+
+	.banner-one_text-two{
+		display:none;
+	}
+
 	.main-header .sticky-header .outer-box{
 		display:block;
 		right: 0px;
@@ -329,12 +333,12 @@
 		padding-top:60px;
 	}
 	
-	.journel-detail_title{
+	.journal-detail_title{
 		font-size:40px;
 		line-height:50px;
 	}
 	
-	.journel-detail p{
+	.journal-detail p{
 		font-size:16px;
 		line-height:26px;
 	}
@@ -353,7 +357,7 @@
 		display:none;
 	}
 	
-	.journel-one .journel-block_one {
+	.journal-one .journal-block_one {
 		width: 100%;
 	}
 	
@@ -379,7 +383,7 @@
 		margin-top:15px;
 	}
 	
-	.journel-two .journel-block_one{
+	.journal-two .journal-block_one{
 		width:100%;
 	}
 	
@@ -453,7 +457,7 @@
 		line-height: 30px;
 	}
 
-	.journel-detail_title{
+	.journal-detail_title{
 		font-size:24px;
 		line-height:34px;
 	}
