@@ -1642,11 +1642,11 @@ html {
 ***/
 .footer_social-icons{
 	position:relative;
-	margin-bottom:30px;
+	margin-top:45px;
 }
 .footer_social-icons li{
 	display:inline-block;
-	margin-right:12px;
+	margin-right:14px;
 }
 .footer_social-icons li a{
 	display:flex;
