@@ -1810,3 +1810,98 @@ html {
 	.blog-block_one-title{ font-size:22px; }
 	.blog-article h2{ font-size:24px; }
 }
+
+/*** Certificaciones (About) ***/
+.certifications-one{
+	position:relative;
+	padding:0px 0px 100px;
+}
+.certification-block_one{
+	position:relative;
+	margin-bottom:30px;
+}
+.certification-block_one-inner{
+	position:relative;
+	display:flex;
+	align-items:center;
+	gap:20px;
+	padding:30px 30px;
+	border:1px solid rgba(255,255,255,0.12);
+	border-radius:8px;
+	transition:border-color 300ms ease;
+}
+.certification-block_one-inner:hover{
+	border-color:rgba(186,2,74,0.6);
+}
+.certification-block_one-icon{
+	position:relative;
+	flex-shrink:0;
+	width:44px;
+	height:44px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	border-radius:50%;
+	background-color:rgba(186,2,74,0.15);
+}
+.certification-block_one-icon img{
+	width:20px;
+	height:20px;
+}
+.certification-block_one-name{
+	position:relative;
+	font-size:18px;
+	font-weight:500;
+	line-height:1.4;
+	color:var(--white-color);
+	margin:0;
+}
+
+/*** Team socials: compact box, icon always visible (was sized for 4 icons + hover-only reveal) ***/
+.team-block_one-socials{
+	width:auto;
+	padding:8px 10px;
+}
+.team-block_one-socials a{
+	opacity:1;
+	transform:none;
+}
+
+/*** Team image: contain within the card (was unconstrained, overflowed at wide viewports) ***/
+.team-block_one{
+	position:relative;
+	overflow:hidden;
+}
+.team-block_one-image{
+	max-width:140px;
+}
+.team-block_one-image img{
+	display:block;
+	width:140px;
+	height:140px;
+	object-fit:cover;
+	border-radius:6px;
+}
+
+/*** Parent-brand link: make it stand out against the busy background ***/
+.title-box p a{
+	color:rgb(186,2,74);
+	font-weight:700;
+	text-decoration:underline;
+	text-underline-offset:3px;
+}
+
+/*** Certification icon: real logo badge, not a tiny tinted checkmark ***/
+.certification-block_one-icon{
+	width:56px;
+	height:56px;
+	border-radius:8px;
+	background-color:transparent;
+	overflow:hidden;
+}
+.certification-block_one-icon img{
+	width:56px;
+	height:56px;
+	object-fit:cover;
+	border-radius:8px;
+}
