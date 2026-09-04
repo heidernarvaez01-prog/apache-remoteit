@@ -1691,17 +1691,17 @@ html {
 	border-color:rgba(186,2,74,0.6);
 	transform:translateY(-4px);
 }
-.blog-block_one-image{
+.blog-block_one_image{
 	position:relative;
 	overflow:hidden;
 }
-.blog-block_one-image img{
+.blog-block_one_image img{
 	display:block;
 	width:100%;
 	height:auto;
 	transition:transform 500ms ease;
 }
-.blog-block_one-inner:hover .blog-block_one-image img{
+.blog-block_one-inner:hover .blog-block_one_image img{
 	transform:scale(1.04);
 }
 .blog-block_one-content{
