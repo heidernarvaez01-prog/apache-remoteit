@@ -24,6 +24,7 @@ export default defineConfig({
         planes: resolve(__dirname, 'HTML/planes.html'),
         about: resolve(__dirname, 'HTML/about.html'),
         contact: resolve(__dirname, 'HTML/contact.html'),
+        blogCiberseguridad: resolve(__dirname, 'HTML/blog-ciberseguridad.html'),
         servicioSoporte: resolve(__dirname, 'HTML/servicio-soporte-operacion-ti.html'),
         servicioSeguridad: resolve(__dirname, 'HTML/servicio-seguridad-redes.html'),
         servicioOptimizacion: resolve(__dirname, 'HTML/servicio-optimizacion-automatizacion.html'),
