@@ -1728,8 +1728,10 @@ html {
 	color:var(--main-color);
 }
 .blog-block_one-text{
+	position:relative;
 	font-size:16px;
 	line-height:1.7;
+	color:var(--white-color);
 	opacity:0.75;
 	margin-bottom:22px;
 }
@@ -1766,6 +1768,7 @@ html {
 	height:auto;
 }
 .blog-article_meta{
+	position:relative;
 	font-size:14px;
 	letter-spacing:1px;
 	text-transform:uppercase;
@@ -1773,21 +1776,31 @@ html {
 	margin-bottom:20px;
 }
 .blog-article h2{
+	position:relative;
 	font-size:28px;
 	margin:36px 0px 16px;
+	color:var(--white-color);
 }
 .blog-article p{
+	position:relative;
 	font-size:17px;
 	line-height:1.85;
+	color:var(--white-color);
 	opacity:0.85;
 	margin-bottom:18px;
 }
+.blog-article p a{
+	color:var(--main-color);
+	text-decoration:underline;
+}
 .blog-article ul{
+	position:relative;
 	margin:0px 0px 24px 22px;
 }
 .blog-article ul li{
 	font-size:17px;
 	line-height:1.8;
+	color:var(--white-color);
 	opacity:0.85;
 	margin-bottom:10px;
 	list-style:disc;
