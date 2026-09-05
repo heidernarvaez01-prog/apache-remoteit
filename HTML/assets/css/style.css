@@ -1814,7 +1814,8 @@ html {
 /*** Certificaciones (About) ***/
 .certifications-one{
 	position:relative;
-	padding:0px 0px 100px;
+	padding:100px 0px 100px;
+	background-color:var(--color-four);
 }
 .certification-block_one{
 	position:relative;
