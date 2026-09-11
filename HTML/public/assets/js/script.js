@@ -360,7 +360,7 @@
             if($('#contact-form').length){
                 $('#contact-form').validate({
                     rules: {
-                        name: {
+                        username: {
                             required: true
                         },
                         email: {
@@ -370,9 +370,52 @@
                         phone: {
                             required: true
                         },
+                        query: {
+                            required: true
+                        },
                         message: {
                             required: true
                         }
+                    },
+                    submitHandler: function(form){
+                        var $form = $(form);
+                        var $btn = $form.find('.submit-btn');
+                        var $status = $('#contact-form-status');
+                        var originalText = $btn.text();
+                        $btn.prop('disabled', true).text('Enviando...');
+
+                        var payload = {
+                            nombre: $form.find('[name="username"]').val(),
+                            email: $form.find('[name="email"]').val(),
+                            telefono: $form.find('[name="phone"]').val(),
+                            asunto: $form.find('[name="query"]').val(),
+                            mensaje: $form.find('[name="message"]').val(),
+                            origen: 'Apache IT Solutions - Formulario de contacto',
+                            fecha: new Date().toISOString()
+                        };
+
+                        $.ajax({
+                            url: 'https://n8n-huou.srv1971812.hstgr.cloud/webhook-test/lead-notification',
+                            type: 'POST',
+                            contentType: 'application/json',
+                            data: JSON.stringify(payload),
+                            timeout: 15000
+                        }).done(function(){
+                            if($status.length){
+                                $status.removeClass('status-error').addClass('status-success')
+                                    .text('¡Gracias! Hemos recibido su mensaje y le contactaremos pronto.').slideDown();
+                            }
+                            form.reset();
+                        }).fail(function(){
+                            if($status.length){
+                                $status.removeClass('status-success').addClass('status-error')
+                                    .text('No se pudo enviar el mensaje. Intente nuevamente o escríbanos a itsolutions@apachestudio.mx').slideDown();
+                            }
+                        }).always(function(){
+                            $btn.prop('disabled', false).text(originalText);
+                        });
+
+                        return false;
                     }
                 });
             }
