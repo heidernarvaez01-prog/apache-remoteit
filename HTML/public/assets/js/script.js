@@ -410,7 +410,7 @@
                         }).fail(function(){
                             if($status.length){
                                 $status.removeClass('status-success').addClass('status-error')
-                                    .text('No se pudo enviar el mensaje. Intente nuevamente o escríbanos a itsolutions@apachestudio.mx').slideDown();
+                                    .text('No se pudo enviar el mensaje. Intente nuevamente o escríbanos a operations@apachestudio.mx').slideDown();
                             }
                         }).always(function(){
                             $btn.prop('disabled', false).text(originalText);
