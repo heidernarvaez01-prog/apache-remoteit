@@ -396,7 +396,7 @@
                         };
 
                         $.ajax({
-                            url: 'https://n8n-huou.srv1971812.hstgr.cloud/webhook/lead-notification',
+                            url: 'https://n8n-huou.srv1971812.hstgr.cloud/webhook/f55ec2d4-3af7-4983-95a3-530c3ccf3c4d',
                             type: 'POST',
                             contentType: 'application/json',
                             data: JSON.stringify(payload),
