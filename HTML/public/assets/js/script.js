@@ -370,9 +370,6 @@
                         phone: {
                             required: true
                         },
-                        query: {
-                            required: true
-                        },
                         message: {
                             required: true
                         }
@@ -384,12 +381,16 @@
                         var originalText = $btn.text();
                         $btn.prop('disabled', true).text('Enviando...');
 
+                        // Claves alineadas con el workflow de n8n "Notificación Lead - Cliente / Apacheitsolutions":
+                        // Name, Company, E-mail (y email en minúscula para el nodo de respuesta al cliente), Phone, Message.
+                        var emailValue = $form.find('[name="email"]').val();
                         var payload = {
-                            nombre: $form.find('[name="username"]').val(),
-                            email: $form.find('[name="email"]').val(),
-                            telefono: $form.find('[name="phone"]').val(),
-                            asunto: $form.find('[name="query"]').val(),
-                            mensaje: $form.find('[name="message"]').val(),
+                            Name: $form.find('[name="username"]').val(),
+                            Company: $form.find('[name="company"]').val(),
+                            'E-mail': emailValue,
+                            email: emailValue,
+                            Phone: $form.find('[name="phone"]').val(),
+                            Message: $form.find('[name="message"]').val(),
                             origen: 'Apache IT Solutions - Formulario de contacto',
                             fecha: new Date().toISOString()
                         };
