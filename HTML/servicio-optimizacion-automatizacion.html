@@ -148,14 +148,92 @@
 							<span>Mejora de Flujos de Trabajo, Automatización de Tareas Repetitivas, Integraciones entre Sistemas y Reducción de Tareas Manuales</span>
 						</li>
 						<li>
-							Contacto
-							<span><a href="mailto:operations@apachestudio.mx">Solicitar cotización</a></span>
+							Modalidad
+							<span>Plan por línea o plan integral</span>
 						</li>
 					</ul>
+					<div class="svc-plans">
+						<span>Ver planes:</span>
+						<a href="planes.html#essential">Essential</a>
+						<a href="planes.html#business">Business</a>
+						<a href="planes.html#enterprise">Enterprise</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Escalera de madurez -->
+			<div class="oa-box">
+				<div class="oa-head">
+					<span class="oa-kicker">Escalera de madurez</span>
+					<h3>¿Por dónde empiezo? Suba un escalón a la vez</h3>
+					<p>Primero ordenamos el proceso, luego lo automatizamos, conectamos sus sistemas y medimos los resultados. Puede empezar por el primer escalón e ir subiendo.</p>
+				</div>
+				<div class="oa-stairs">
+					<div class="oa-step s1"><i class="fa-solid fa-route"></i><strong>1. Ordenar</strong><span>Mejora de flujos de trabajo</span><em>Essential</em></div>
+					<div class="oa-step s2"><i class="fa-solid fa-robot"></i><strong>2. Automatizar</strong><span>Tareas repetitivas</span><em>Business</em></div>
+					<div class="oa-step s3"><i class="fa-solid fa-plug"></i><strong>3. Conectar</strong><span>Integraciones entre sistemas</span><em>Business</em></div>
+					<div class="oa-step s4"><i class="fa-solid fa-chart-line"></i><strong>4. Medir</strong><span>Tableros e indicadores</span><em>Enterprise</em></div>
+				</div>
+			</div>
+
+			<!-- Calculadora -->
+			<div class="oa-box">
+				<div class="oa-head">
+					<span class="oa-kicker">Calculadora de tiempo recuperable</span>
+					<h3>¿Cuánto tiempo podría recuperar su equipo?</h3>
+					<p>Mueva los controles y vea cuántas horas se liberarían al automatizar tareas manuales.</p>
+				</div>
+				<div class="oa-calc">
+					<div class="oa-controls">
+						<label>Horas por semana en tareas manuales (por persona): <b id="oa-h-v">5</b>
+							<input type="range" id="oa-h" min="1" max="40" value="5"></label>
+						<label>Personas que hacen esas tareas: <b id="oa-p-v">3</b>
+							<input type="range" id="oa-p" min="1" max="50" value="3"></label>
+						<label>Parte que se puede automatizar: <b id="oa-a-v">50%</b>
+							<input type="range" id="oa-a" min="10" max="100" step="5" value="50"></label>
+					</div>
+					<div class="oa-out">
+						<div><span id="oa-m">30</span><small>horas al mes</small></div>
+						<div><span id="oa-y">360</span><small>horas al año</small></div>
+						<p class="oa-note">Es una estimación: horas × personas × parte automatizable × 4 semanas. El resultado real depende de cada proceso.</p>
+						<a class="oa-btn" href="contact.html">Quiero recuperar ese tiempo</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+	<style>
+	.oa-box{margin-top:70px;padding:50px 40px;border-radius:16px;background:#0e0e12;color:#e9e9ee}
+	.oa-head{max-width:720px;margin-bottom:30px}
+	.oa-kicker{color:#ff2d55;text-transform:uppercase;letter-spacing:2px;font-size:13px;font-weight:700}
+	.oa-head h3{color:#fff;font-size:30px;line-height:1.25;margin:8px 0 10px}
+	.oa-head p{color:#b9b9c3}
+	.oa-stairs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:end}
+	.oa-step{display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:20px;border-radius:12px;background:rgba(255,255,255,.05);border-top:3px solid #ff2d55}
+	.oa-step.s1{min-height:150px}.oa-step.s2{min-height:200px}.oa-step.s3{min-height:250px}.oa-step.s4{min-height:300px;background:rgba(255,45,85,.12)}
+	.oa-step i{color:#ff2d55;font-size:24px;margin-bottom:6px}
+	.oa-step strong{color:#fff;font-size:19px}
+	.oa-step span{color:#b9b9c3;font-size:15px;line-height:1.4}
+	.oa-step em{font-style:normal;font-size:12px;color:#ff2d55;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-top:6px}
+	.oa-calc{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+	.oa-controls label{display:block;color:#e9e9ee;margin-bottom:22px}
+	.oa-controls b{color:#ff2d55}
+	.oa-controls input{width:100%;accent-color:#ff2d55;margin-top:8px}
+	.oa-out{text-align:center}
+	.oa-out>div{display:inline-block;margin:0 16px 10px}
+	.oa-out>div span{display:block;font-size:46px;font-weight:800;color:#fff;line-height:1.1}
+	.oa-out small{color:#b9b9c3}
+	.oa-note{color:#8d8d98;font-size:13px;margin:10px 0 20px}
+	.oa-btn{display:inline-block;padding:13px 26px;border-radius:30px;background:#ff2d55;color:#fff;font-weight:600}
+	.oa-btn:hover{color:#fff;opacity:.9}
+	@media (max-width:991px){.oa-calc{grid-template-columns:1fr}.oa-stairs{grid-template-columns:1fr 1fr}.oa-step.s1,.oa-step.s2,.oa-step.s3,.oa-step.s4{min-height:0}}
+	@media (max-width:640px){.oa-box{padding:36px 20px}.oa-stairs{grid-template-columns:1fr}.oa-head h3{font-size:24px}}
+	</style>
+	<script>
+	(function(){var f=function(id){return document.getElementById(id)};
+	function u(){var h=+f('oa-h').value,p=+f('oa-p').value,a=+f('oa-a').value;f('oa-h-v').textContent=h;f('oa-p-v').textContent=p;f('oa-a-v').textContent=a+'%';var m=Math.round(h*p*a/100*4);f('oa-m').textContent=m.toLocaleString('es');f('oa-y').textContent=(m*12).toLocaleString('es');}
+	['oa-h','oa-p','oa-a'].forEach(function(i){f(i).addEventListener('input',u)});u();})();
+	</script>
 	<!-- End Single Work -->
 	
 	<!-- Main Footer -->
