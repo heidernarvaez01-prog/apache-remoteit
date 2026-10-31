@@ -1975,3 +1975,29 @@ html {
 		height:240px;
 	}
 }
+
+/* Servicio: acordeón, planes y "Así funciona" */
+.svc-acc{margin:25px 0 20px;border-top:1px solid rgba(255,255,255,.15)}
+.svc-acc details{border-bottom:1px solid rgba(255,255,255,.15);padding:14px 0}
+.svc-acc summary{cursor:pointer;list-style:none;font-weight:600;color:#fff;font-size:17px;display:flex;justify-content:space-between;align-items:center}
+.svc-acc summary::-webkit-details-marker{display:none}
+.svc-acc summary::after{content:"+";font-size:22px;color:rgb(186,2,74);transition:transform .2s}
+.svc-acc details[open] summary::after{transform:rotate(45deg)}
+.svc-acc details p{margin:10px 0 0;color:rgba(255,255,255,.75);line-height:1.7}
+.svc-plans{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:10px 0 25px}
+.svc-plans span{color:rgba(255,255,255,.7);font-size:14px}
+.svc-plans a{padding:6px 16px;border:1px solid rgb(186,2,74);border-radius:20px;color:#fff;font-size:14px;transition:background .2s}
+.svc-plans a:hover{background:rgb(186,2,74);color:#fff}
+.svc-flow{position:relative;padding:70px 0 90px;border-top:1px solid rgba(255,255,255,.1)}
+.svc-flow_title{text-align:center;color:#fff;margin-bottom:40px}
+.svc-flow_steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);gap:24px}
+.svc-flow_steps li{text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}
+.svc-flow_icon{width:60px;height:60px;border-radius:50%;background:rgba(186,2,74,.18);display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+.svc-flow_icon svg{width:26px;height:26px;fill:none;stroke:rgb(230,60,120);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.svc-flow_steps strong{color:#fff;font-size:18px;line-height:1.3}
+.svc-flow_steps em{font-style:normal;color:rgba(255,255,255,.7);font-size:15px;line-height:1.5}
+.svc-flow_cta{text-align:center;margin-top:50px}
+.svc-flow_cta a{display:inline-block;padding:14px 32px;background:rgb(186,2,74);color:#fff;text-transform:uppercase;font-size:14px;letter-spacing:.5px}
+@media (max-width:991px){.svc-flow_steps{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:575px){.svc-flow_steps{grid-template-columns:repeat(2,1fr)}}
+.planes-one [id]{scroll-margin-top:120px}
