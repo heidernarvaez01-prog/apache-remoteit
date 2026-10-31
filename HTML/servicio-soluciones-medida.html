@@ -148,14 +148,146 @@
 							<span>Desarrollo de Herramientas Internas, Corrección de Fallas Complejas, Proyectos Especiales y Migraciones y Integración con Sistemas Existentes</span>
 						</li>
 						<li>
-							Contacto
-							<span><a href="mailto:operations@apachestudio.mx">Solicitar cotización</a></span>
+							Modalidad
+							<span>Plan por línea o plan integral</span>
 						</li>
 					</ul>
+					<div class="svc-plans">
+						<span class="svc-plans-label">Ver planes:</span>
+						<a href="planes.html#essential">Essential</a>
+						<a href="planes.html#business">Business</a>
+						<a href="planes.html#enterprise">Enterprise</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<section class="sm-wrap">
+		<div class="auto-container">
+			<div class="sm-head"><span class="sm-kicker">Tres puertas de entrada</span><h3>¿Cuál de estas frases suena a su empresa?</h3></div>
+			<div class="sm-doors">
+				<div class="sm-door" id="sm-d1">
+					<div class="sm-ico"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+					<p class="sm-quote">“Algo falla y nadie lo resuelve.”</p>
+					<h4>Corrección de fallas complejas</h4>
+					<p class="sm-get"><strong>Usted recibe:</strong> la causa encontrada, la falla corregida y un informe para que no vuelva a pasar.</p>
+				</div>
+				<div class="sm-door" id="sm-d2">
+					<div class="sm-ico"><i class="fa-solid fa-laptop-code"></i></div>
+					<p class="sm-quote">“Hacemos todo en Excel y a mano.”</p>
+					<h4>Desarrollo de herramientas internas</h4>
+					<p class="sm-get"><strong>Usted recibe:</strong> una herramienta propia, hecha a la forma de trabajar de su equipo, con capacitación.</p>
+				</div>
+				<div class="sm-door" id="sm-d3">
+					<div class="sm-ico"><i class="fa-solid fa-diagram-project"></i></div>
+					<p class="sm-quote">“Tenemos que cambiar de sistema sin parar la operación.”</p>
+					<h4>Proyectos especiales, migraciones e integración</h4>
+					<p class="sm-get"><strong>Usted recibe:</strong> un plan por etapas, la migración hecha y sus sistemas conectados entre sí.</p>
+				</div>
+			</div>
+
+			<div class="sm-head"><span class="sm-kicker">Dos formas de contratar</span><h3>¿Bolsa de horas o proyecto cerrado?</h3></div>
+			<div class="sm-modes">
+				<div class="sm-mode">
+					<h4><i class="fa-regular fa-clock"></i> Bolsa de horas mensual</h4>
+					<p>Usted reserva un número de horas cada mes y las usa en lo que vaya surgiendo.</p>
+					<ul><li>Ideal para mejoras continuas y ajustes pequeños</li><li>Prioridades que cambian sobre la marcha</li><li>Pago mensual fijo, informe de horas usadas</li></ul>
+				</div>
+				<div class="sm-mode">
+					<h4><i class="fa-solid fa-flag-checkered"></i> Proyecto cerrado</h4>
+					<p>Definimos juntos el alcance, el precio y la fecha de entrega antes de empezar.</p>
+					<ul><li>Ideal para una herramienta nueva o una migración</li><li>Alcance claro y entregables acordados</li><li>Precio fijo, pagos por etapas</li></ul>
+				</div>
+			</div>
+
+			<div class="sm-head" id="reto"><span class="sm-kicker">Cuéntenos su reto</span><h3>Tres respuestas y le decimos qué servicio le aplica</h3></div>
+			<form class="sm-form" id="sm-form">
+				<p class="sm-q">¿Qué necesita?</p>
+				<div class="sm-opts" data-name="need">
+					<button type="button" data-v="1">Arreglar algo que falla</button>
+					<button type="button" data-v="2">Una herramienta nueva</button>
+					<button type="button" data-v="3">Migrar o conectar sistemas</button>
+				</div>
+				<p class="sm-q">¿Qué tan urgente es?</p>
+				<div class="sm-opts" data-name="urg">
+					<button type="button" data-v="Urgente (esta semana)">Esta semana</button>
+					<button type="button" data-v="Este mes">Este mes</button>
+					<button type="button" data-v="Sin prisa">Sin prisa</button>
+				</div>
+				<p class="sm-q">Descríbalo en una frase</p>
+				<input type="text" id="sm-desc" maxlength="200" placeholder="Ej.: el sistema de facturación se cae todos los lunes" required>
+				<div class="sm-row">
+					<input type="text" id="sm-name" maxlength="80" placeholder="Su nombre" required>
+					<input type="email" id="sm-email" maxlength="120" placeholder="Su correo" required>
+				</div>
+				<button type="submit" class="sm-send">Enviar mi reto</button>
+				<p class="sm-msg" id="sm-msg"></p>
+				<div class="sm-result" id="sm-result"></div>
+			</form>
+		</div>
+	</section>
+	<style>
+	.sm-wrap{background:#0e0e12;color:#e9e9ee;padding:80px 0}
+	.sm-head{text-align:center;margin:0 auto 32px;max-width:720px}
+	.sm-head:not(:first-child){margin-top:70px}
+	.sm-kicker{color:#ff2d55;text-transform:uppercase;letter-spacing:2px;font-size:13px;font-weight:600}
+	.sm-head h3{color:#fff;margin-top:8px;font-size:30px;line-height:1.25}
+	.sm-doors{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+	.sm-door{background:#17171d;border:1px solid #2a2a33;border-radius:18px;padding:32px 26px;transition:.3s}
+	.sm-door:hover,.sm-door.hit{border-color:#ff2d55;transform:translateY(-4px)}
+	.sm-ico{width:56px;height:56px;border-radius:50%;background:rgba(255,45,85,.15);color:#ff2d55;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:18px}
+	.sm-quote{font-family:Lora,serif;font-style:italic;font-size:22px;line-height:1.35;color:#fff;margin-bottom:14px}
+	.sm-door h4{color:#ff2d55;font-size:16px;margin-bottom:10px}
+	.sm-get{color:#bdbdc7;font-size:15px;line-height:1.55;margin:0}
+	.sm-get strong{color:#fff}
+	.sm-modes{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+	.sm-mode{background:#17171d;border-radius:18px;padding:30px;border-top:3px solid #ff2d55}
+	.sm-mode h4{color:#fff;font-size:20px;margin-bottom:10px}
+	.sm-mode h4 i{color:#ff2d55;margin-right:8px}
+	.sm-mode p{color:#bdbdc7}
+	.sm-mode ul{margin:12px 0 0;padding:0;list-style:none}
+	.sm-mode li{color:#e9e9ee;padding:6px 0 6px 24px;position:relative}
+	.sm-mode li:before{content:"✓";color:#ff2d55;position:absolute;left:0}
+	.sm-form{max-width:760px;margin:0 auto;background:#17171d;border-radius:18px;padding:32px}
+	.sm-q{color:#fff;font-weight:600;margin:0 0 10px}
+	.sm-opts{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+	.sm-opts button{background:transparent;border:1px solid #3a3a45;color:#e9e9ee;border-radius:30px;padding:9px 18px;font-size:14px;cursor:pointer}
+	.sm-opts button.on{background:#ff2d55;border-color:#ff2d55;color:#fff}
+	.sm-form input{width:100%;background:#0e0e12;border:1px solid #3a3a45;border-radius:10px;color:#fff;padding:12px 14px;margin-bottom:14px}
+	.sm-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+	.sm-send{background:#ff2d55;color:#fff;border:0;border-radius:30px;padding:13px 28px;font-weight:600;cursor:pointer}
+	.sm-msg{margin:12px 0 0;color:#ff8fa5;min-height:1em}
+	.sm-result{display:none;margin-top:16px;padding:20px;border-radius:14px;background:rgba(255,45,85,.1);border:1px solid #ff2d55;color:#fff}
+	@media (max-width:991px){.sm-doors{grid-template-columns:1fr}.sm-modes{grid-template-columns:1fr}}
+	@media (max-width:575px){.sm-row{grid-template-columns:1fr}.sm-form{padding:22px}.sm-head h3{font-size:24px}}
+	</style>
+	<script>
+	(function(){
+		var sel={}, names={1:'Corrección de fallas complejas',2:'Desarrollo de herramientas internas',3:'Proyectos especiales, migraciones e integración'};
+		document.querySelectorAll('.sm-opts').forEach(function(g){
+			g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+				g.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');sel[g.dataset.name]=b.dataset.v;});
+		});
+		var f=document.getElementById('sm-form'),msg=document.getElementById('sm-msg'),res=document.getElementById('sm-result');
+		f.addEventListener('submit',function(e){e.preventDefault();
+			if(!sel.need||!sel.urg){msg.textContent='Elija qué necesita y qué tan urgente es.';return;}
+			msg.textContent='Enviando…';
+			var svc=names[sel.need];
+			fetch('https://n8n-huou.srv1971812.hstgr.cloud/webhook/f55ec2d4-3af7-4983-95a3-530c3ccf3c4d',{method:'POST',headers:{'Content-Type':'application/json'},
+				body:JSON.stringify({nombre:document.getElementById('sm-name').value.trim(),email:document.getElementById('sm-email').value.trim(),telefono:'',
+				asunto:'Reto a la medida: '+svc+' · '+sel.urg,mensaje:document.getElementById('sm-desc').value.trim(),origen:'Soluciones a la Medida - Cuéntenos su reto',fecha:new Date().toISOString()})})
+			.then(function(r){if(!r.ok)throw 0;msg.textContent='';})
+			.catch(function(){msg.textContent='No pudimos enviarlo. Intente de nuevo o escríbanos desde Contacto.';})
+			.finally(function(){
+				document.querySelectorAll('.sm-door').forEach(function(d){d.classList.remove('hit')});
+				document.getElementById('sm-d'+sel.need).classList.add('hit');
+				res.style.display='block';
+				res.innerHTML='<strong>Su servicio: '+svc+'</strong><br>Urgencia: '+sel.urg+'. Le escribiremos pronto con los siguientes pasos.';
+			});
+		});
+	})();
+	</script>
 	<!-- End Single Work -->
 	
 	<!-- Main Footer -->
