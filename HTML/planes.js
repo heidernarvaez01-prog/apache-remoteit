@@ -20,7 +20,7 @@ function render(line, selectedTier) {
       <p class="plan-audience">${plan.audience}</p>
       <ul class="plan-features">${plan.features.map(feature => `<li><i class="fa-solid fa-check" aria-hidden="true"></i><span>${feature}</span></li>`).join('')}</ul>
       <a class="theme-btn plan-cta" href="${contactUrl(line.id, tiers[index])}">Elegir ${tierNames[index]}<i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-    </article>`).join('')}</div><p class="plans-note">Precio final según diagnóstico. Equipos y licencias se cotizan aparte con proveedor externo.</p>`;
+    </article>`).join('')}</div>`;
 }
 
 if (tabs && panel) {
