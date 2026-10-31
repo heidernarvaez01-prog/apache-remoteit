@@ -158,8 +158,12 @@
 						<a href="planes.html#business">Business</a>
 						<a href="planes.html#enterprise">Enterprise</a>
 					</div>
+				</div>
+			</div>
 
-					<!-- Lo que usted recibe -->
+			<!-- Lo que usted recibe · ¿Por qué lo necesita? -->
+			<div class="row clearfix cc-row">
+				<div class="column col-lg-6 col-md-12 col-sm-12">
 					<div class="cc-box">
 						<span class="cc-kicker">Lo que usted recibe</span>
 						<h3>Entregables concretos, no solo horas de consultoría</h3>
@@ -172,8 +176,8 @@
 							<div><i class="fa-solid fa-sitemap"></i><strong>Modelo de gobierno de TI</strong><span>Roles y procesos ITIL</span></div>
 						</div>
 					</div>
-
-					<!-- ¿Por qué lo necesita? -->
+				</div>
+				<div class="column col-lg-6 col-md-12 col-sm-12">
 					<div class="cc-box">
 						<span class="cc-kicker">¿Por qué lo necesita?</span>
 						<h3>Elija su situación y vea qué servicios le aplican</h3>
@@ -199,14 +203,16 @@
 		</div>
 	</section>
 	<style>
-	.cc-box{margin-top:30px;padding:28px 24px;border-radius:16px;background:#0e0e12;color:#e9e9ee}
+	.cc-row{display:flex;flex-wrap:wrap;margin-top:10px}
+	.cc-row>.column{display:flex;order:0!important;margin-bottom:0}
+	.cc-box{flex:1;display:flex;flex-direction:column;margin:0 0 30px;padding:28px 24px;border-radius:16px;background:#0e0e12;color:#e9e9ee}
 	.cc-kicker{color:#ff2d55;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:700}
 	.cc-box h3{color:#fff;font-size:22px;line-height:1.3;margin:8px 0 20px}
-	.cc-deliv{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-	.cc-deliv>div{display:grid;grid-template-columns:28px 1fr;column-gap:10px;padding:16px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
-	.cc-deliv i{grid-row:span 2;color:#ff2d55;font-size:20px;margin-top:2px}
-	.cc-deliv strong{color:#fff;font-size:15px;line-height:1.3}
-	.cc-deliv span{color:#b9b9c3;font-size:13px;line-height:1.4}
+	.cc-deliv{display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1;grid-auto-rows:1fr}
+	.cc-deliv>div{display:grid;grid-template-columns:24px 1fr;column-gap:9px;padding:14px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);align-content:center}
+	.cc-deliv i{grid-row:span 2;color:#ff2d55;font-size:19px;margin-top:2px}
+	.cc-deliv strong{color:#fff;font-size:14.5px;line-height:1.3}
+	.cc-deliv span{color:#b9b9c3;font-size:12.5px;line-height:1.4}
 	.cc-motives{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
 	.cc-motives button{padding:9px 16px;border-radius:24px;border:1px solid rgba(255,255,255,.2);background:transparent;color:#e9e9ee;font-size:14px;cursor:pointer;transition:all .2s}
 	.cc-motives button:hover{border-color:#ff2d55}
@@ -216,7 +222,7 @@
 	.cc-svcs li i{color:#ff2d55}
 	.cc-svcs.active li{opacity:.35}
 	.cc-svcs.active li.hit{opacity:1;color:#fff;font-weight:600}
-	.cc-btn{display:inline-block;padding:12px 24px;border-radius:30px;background:#ff2d55;color:#fff;font-weight:600}
+	.cc-btn{display:inline-block;padding:12px 24px;border-radius:30px;background:#ff2d55;color:#fff;font-weight:600;margin-top:auto;align-self:flex-start}
 	.cc-btn:hover{color:#fff;opacity:.9}
 	@media (max-width:575px){.cc-deliv{grid-template-columns:1fr}.cc-box{padding:24px 18px}}
 	</style>
