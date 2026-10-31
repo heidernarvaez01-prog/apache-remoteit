@@ -148,14 +148,88 @@
 							<span>Auditorías basadas en ISO/IEC 27001, Diagnóstico de Riesgos, Implementación de Controles y Documentación de Procesos</span>
 						</li>
 						<li>
-							Contacto
-							<span><a href="mailto:operations@apachestudio.mx">Solicitar cotización</a></span>
+							Modalidad
+							<span>Plan por línea o plan integral</span>
 						</li>
 					</ul>
+					<div class="svc-plans">
+						<span>Ver planes:</span>
+						<a href="planes.html#essential">Essential</a>
+						<a href="planes.html#business">Business</a>
+						<a href="planes.html#enterprise">Enterprise</a>
+					</div>
+
+					<!-- Lo que usted recibe -->
+					<div class="cc-box">
+						<span class="cc-kicker">Lo que usted recibe</span>
+						<h3>Entregables concretos, no solo horas de consultoría</h3>
+						<div class="cc-deliv">
+							<div><i class="fa-solid fa-file-magnifying-glass"></i><strong>Informe de brechas</strong><span>Con plan de mejora priorizado</span></div>
+							<div><i class="fa-solid fa-table-cells"></i><strong>Matriz de riesgos</strong><span>Y plan de tratamiento</span></div>
+							<div><i class="fa-solid fa-clipboard-check"></i><strong>Informe de auditoría</strong><span>Hallazgos y evidencias</span></div>
+							<div><i class="fa-solid fa-shield-halved"></i><strong>Controles en marcha</strong><span>Con medición de eficacia</span></div>
+							<div><i class="fa-solid fa-copy"></i><strong>Políticas y manuales</strong><span>Procedimientos y control de versiones</span></div>
+							<div><i class="fa-solid fa-sitemap"></i><strong>Modelo de gobierno de TI</strong><span>Roles y procesos ITIL</span></div>
+						</div>
+					</div>
+
+					<!-- ¿Por qué lo necesita? -->
+					<div class="cc-box">
+						<span class="cc-kicker">¿Por qué lo necesita?</span>
+						<h3>Elija su situación y vea qué servicios le aplican</h3>
+						<div class="cc-motives">
+							<button type="button" data-s="1,3,4,5">Un cliente me pide ISO 27001</button>
+							<button type="button" data-s="1,2,5">Voy a una licitación</button>
+							<button type="button" data-s="2,4,5">Manejo datos personales</button>
+							<button type="button" data-s="2,3,4">Tuve un incidente</button>
+							<button type="button" data-s="1,5,6">Mi TI está desordenada</button>
+						</div>
+						<ul class="cc-svcs">
+							<li data-id="1"><i class="fa-regular fa-circle-check"></i>Diagnóstico de brechas</li>
+							<li data-id="2"><i class="fa-regular fa-circle-check"></i>Diagnóstico de riesgos</li>
+							<li data-id="3"><i class="fa-regular fa-circle-check"></i>Auditorías internas ISO/IEC 27001</li>
+							<li data-id="4"><i class="fa-regular fa-circle-check"></i>Implementación de controles</li>
+							<li data-id="5"><i class="fa-regular fa-circle-check"></i>Documentación</li>
+							<li data-id="6"><i class="fa-regular fa-circle-check"></i>Gobierno de TI</li>
+						</ul>
+						<a class="cc-btn" href="contact.html">Solicitar cotización</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+	<style>
+	.cc-box{margin-top:30px;padding:28px 24px;border-radius:16px;background:#0e0e12;color:#e9e9ee}
+	.cc-kicker{color:#ff2d55;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:700}
+	.cc-box h3{color:#fff;font-size:22px;line-height:1.3;margin:8px 0 20px}
+	.cc-deliv{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+	.cc-deliv>div{display:grid;grid-template-columns:28px 1fr;column-gap:10px;padding:16px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+	.cc-deliv i{grid-row:span 2;color:#ff2d55;font-size:20px;margin-top:2px}
+	.cc-deliv strong{color:#fff;font-size:15px;line-height:1.3}
+	.cc-deliv span{color:#b9b9c3;font-size:13px;line-height:1.4}
+	.cc-motives{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+	.cc-motives button{padding:9px 16px;border-radius:24px;border:1px solid rgba(255,255,255,.2);background:transparent;color:#e9e9ee;font-size:14px;cursor:pointer;transition:all .2s}
+	.cc-motives button:hover{border-color:#ff2d55}
+	.cc-motives button.on{background:#ff2d55;border-color:#ff2d55;color:#fff}
+	.cc-svcs{list-style:none;padding:0;margin:0 0 22px}
+	.cc-svcs li{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid rgba(255,255,255,.08);color:#e9e9ee;font-size:15px;transition:opacity .2s,color .2s}
+	.cc-svcs li i{color:#ff2d55}
+	.cc-svcs.active li{opacity:.35}
+	.cc-svcs.active li.hit{opacity:1;color:#fff;font-weight:600}
+	.cc-btn{display:inline-block;padding:12px 24px;border-radius:30px;background:#ff2d55;color:#fff;font-weight:600}
+	.cc-btn:hover{color:#fff;opacity:.9}
+	@media (max-width:575px){.cc-deliv{grid-template-columns:1fr}.cc-box{padding:24px 18px}}
+	</style>
+	<script>
+	document.querySelectorAll('.cc-motives button').forEach(function(b){b.addEventListener('click',function(){
+		var on=!b.classList.contains('on');
+		document.querySelectorAll('.cc-motives button').forEach(function(x){x.classList.remove('on')});
+		var list=document.querySelector('.cc-svcs'),ids=on?b.dataset.s.split(','):[];
+		if(on)b.classList.add('on');
+		list.classList.toggle('active',on);
+		list.querySelectorAll('li').forEach(function(li){li.classList.toggle('hit',ids.indexOf(li.dataset.id)>-1)});
+	})});
+	</script>
 	<!-- End Single Work -->
 	
 	<!-- Main Footer -->
