@@ -145,17 +145,108 @@
 					<ul class="single-work_list">
 						<li>
 							Incluye
-							<span>Administración de Firewalls, Monitoreo de Alarmas y Eventos, Gestión de Accesos y Hardening de Sistemas</span>
+							<span>Administración de Firewalls, Segmentación de Red, VPN y Gestión de Accesos, Hardening de Sistemas y Monitoreo de Alarmas y Eventos</span>
 						</li>
 						<li>
-							Contacto
-							<span><a href="mailto:operations@apachestudio.mx">Solicitar cotización</a></span>
+							Modalidad
+							<span>Plan por línea o plan integral</span>
 						</li>
 					</ul>
 				</div>
 			</div>
+
+			<!-- Capas de protección -->
+			<div class="sr-layers">
+				<div class="sr-head">
+					<span class="sr-kicker">Capas de protección</span>
+					<h3>Un firewall no basta: su empresa se protege por capas</h3>
+					<p>Como una cebolla, cada capa detiene lo que la anterior dejó pasar. De afuera hacia adentro:</p>
+				</div>
+				<div class="sr-layers-grid">
+					<div class="sr-onion" aria-hidden="true">
+						<div class="ring r1"><div class="ring r2"><div class="ring r3"><div class="ring r4"><div class="core"><i class="fa-solid fa-building-shield"></i></div></div></div></div></div>
+						<div class="sr-radar"></div>
+					</div>
+					<ol class="sr-layer-list">
+						<li><span class="n">1</span><div><strong><i class="fa-solid fa-fire"></i> Firewall</strong><p>Protege la entrada: filtra el tráfico de internet antes de que llegue a su red.</p></div></li>
+						<li><span class="n">2</span><div><strong><i class="fa-solid fa-diagram-project"></i> Segmentación</strong><p>Protege la red interna: si un equipo cae, el problema no se extiende al resto.</p></div></li>
+						<li><span class="n">3</span><div><strong><i class="fa-solid fa-user-lock"></i> VPN e identidades</strong><p>Protegen los accesos: solo entra quien debe, desde donde debe.</p></div></li>
+						<li><span class="n">4</span><div><strong><i class="fa-solid fa-laptop-code"></i> Hardening</strong><p>Protege los equipos: servidores y computadores configurados para resistir ataques.</p></div></li>
+						<li class="all"><span class="n"><i class="fa-solid fa-eye"></i></span><div><strong>Monitoreo 24/7</strong><p>Vigila todas las capas y nos alerta ante cualquier evento sospechoso.</p></div></li>
+					</ol>
+				</div>
+			</div>
+
+			<!-- Autodiagnóstico -->
+			<div class="sr-quiz" id="autodiagnostico">
+				<div class="sr-head">
+					<span class="sr-kicker">Autodiagnóstico rápido</span>
+					<h3>¿Qué tan protegida está su empresa?</h3>
+					<p>Marque lo que su empresa ya tiene hoy:</p>
+				</div>
+				<div class="sr-checks">
+					<label><input type="checkbox"> Firewall administrado y actualizado</label>
+					<label><input type="checkbox"> Red interna segmentada (invitados, oficinas, servidores)</label>
+					<label><input type="checkbox"> VPN para el acceso remoto</label>
+					<label><input type="checkbox"> Doble factor de autenticación (MFA) en cuentas clave</label>
+					<label><input type="checkbox"> Equipos y servidores con hardening y parches al día</label>
+					<label><input type="checkbox"> Monitoreo de alertas y eventos de seguridad</label>
+				</div>
+				<div class="sr-result">
+					<div class="sr-score"><span id="sr-count">0</span> de 6</div>
+					<div class="sr-bar"><span id="sr-fill"></span></div>
+					<p id="sr-msg">Marque las opciones para ver su nivel de protección.</p>
+					<div class="sr-actions">
+						<a class="sr-btn" href="contact.html">Solicitar diagnóstico gratuito</a>
+						<a class="sr-btn ghost" href="contact.html">Solicitar cotización</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
+	<style>
+	.sr-layers,.sr-quiz{margin-top:70px;padding:50px 40px;border-radius:16px;background:#0e0e12;color:#e9e9ee}
+	.sr-head{max-width:720px;margin-bottom:30px}
+	.sr-kicker{color:#ff2d55;text-transform:uppercase;letter-spacing:2px;font-size:13px;font-weight:700}
+	.sr-head h3{color:#fff;font-size:30px;line-height:1.25;margin:8px 0 10px}
+	.sr-head p{color:#b9b9c3}
+	.sr-layers-grid{display:grid;grid-template-columns:380px 1fr;gap:50px;align-items:center}
+	.sr-onion{position:relative;width:340px;height:340px;margin:auto}
+	.sr-onion .ring{border-radius:50%;display:flex;align-items:center;justify-content:center;width:100%;height:100%;padding:28px;border:2px solid rgba(255,45,85,.55);background:rgba(255,45,85,.07)}
+	.sr-onion .r2{border-color:rgba(255,45,85,.7);background:rgba(255,45,85,.1)}
+	.sr-onion .r3{border-color:rgba(255,45,85,.85);background:rgba(255,45,85,.14)}
+	.sr-onion .r4{border-color:#ff2d55;background:rgba(255,45,85,.2)}
+	.sr-onion .core{width:100%;height:100%;border-radius:50%;background:#ff2d55;display:flex;align-items:center;justify-content:center;color:#fff;font-size:30px;box-shadow:0 0 40px rgba(255,45,85,.6)}
+	.sr-radar{position:absolute;inset:-14px;border-radius:50%;border:2px dashed rgba(255,255,255,.35);animation:srspin 30s linear infinite}
+	@keyframes srspin{to{transform:rotate(360deg)}}
+	.sr-layer-list{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+	.sr-layer-list li{display:flex;gap:16px;align-items:flex-start;padding:14px 16px;border-radius:10px;background:rgba(255,255,255,.04);border-left:3px solid #ff2d55}
+	.sr-layer-list li.all{border-left-style:dashed;background:rgba(255,45,85,.08)}
+	.sr-layer-list .n{flex:0 0 34px;height:34px;border-radius:50%;background:#ff2d55;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+	.sr-layer-list strong{color:#fff;font-size:17px}
+	.sr-layer-list strong i{color:#ff2d55;margin-right:6px}
+	.sr-layer-list p{margin:4px 0 0;color:#b9b9c3;font-size:15px;line-height:1.5}
+	.sr-checks{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+	.sr-checks label{display:flex;gap:12px;align-items:center;padding:14px 16px;border-radius:10px;background:rgba(255,255,255,.05);cursor:pointer;color:#e9e9ee;margin:0}
+	.sr-checks input{width:20px;height:20px;accent-color:#ff2d55}
+	.sr-result{margin-top:30px;text-align:center}
+	.sr-score{font-size:44px;font-weight:800;color:#fff}
+	.sr-score span{color:#ff2d55}
+	.sr-bar{height:10px;background:rgba(255,255,255,.1);border-radius:10px;max-width:480px;margin:10px auto;overflow:hidden}
+	.sr-bar span{display:block;height:100%;width:0;background:#ff2d55;transition:width .3s}
+	#sr-msg{color:#b9b9c3;max-width:560px;margin:10px auto 20px}
+	.sr-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+	.sr-btn{display:inline-block;padding:13px 26px;border-radius:30px;background:#ff2d55;color:#fff;font-weight:600}
+	.sr-btn:hover{color:#fff;opacity:.9}
+	.sr-btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.4)}
+	@media (max-width:991px){.sr-layers-grid{grid-template-columns:1fr}}
+	@media (max-width:640px){.sr-layers,.sr-quiz{padding:36px 20px}.sr-checks{grid-template-columns:1fr}.sr-onion{width:260px;height:260px}.sr-onion .ring{padding:20px}.sr-head h3{font-size:24px}}
+	</style>
+	<script>
+	(function(){var boxes=document.querySelectorAll('.sr-checks input');var msgs=['Su empresa está muy expuesta. Un diagnóstico gratuito le mostrará por dónde empezar.','Protección básica con huecos importantes. Le ayudamos a cerrar las capas que faltan.','Protección básica con huecos importantes. Le ayudamos a cerrar las capas que faltan.','Va por buen camino, pero aún hay capas abiertas. Revisemos juntos cuáles priorizar.','Va por buen camino, pero aún hay capas abiertas. Revisemos juntos cuáles priorizar.','Buen nivel. Un diagnóstico confirma que todo esté bien configurado.','Excelente. Le ayudamos a mantenerlo así con monitoreo continuo.'];
+	function u(){var c=0;boxes.forEach(function(b){if(b.checked)c++});document.getElementById('sr-count').textContent=c;document.getElementById('sr-fill').style.width=(c/6*100)+'%';document.getElementById('sr-msg').textContent=msgs[c];}
+	boxes.forEach(function(b){b.addEventListener('change',u)});})();
+	</script>
 	<!-- End Single Work -->
 	
 	<!-- Main Footer -->
