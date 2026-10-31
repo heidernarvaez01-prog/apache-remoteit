@@ -16,7 +16,7 @@ function render(line, selectedTier) {
       <div class="plan-badge-space">${index === 1 ? '<span class="plan-badge"><i class="fa-solid fa-star" aria-hidden="true"></i> Más elegido</span>' : ''}</div>
       <h3>${tierNames[index]}</h3>
       <div class="plan-price-label">Desde US$</div>
-      <div class="plan-price"><strong>${new Intl.NumberFormat('es-CO').format(plan.price)}</strong><span>/ mes</span></div>
+      <div class="plan-price"><strong>${new Intl.NumberFormat('es-CO').format(plan.price)}</strong><span>/ mes · sin IVA</span></div>
       <p class="plan-audience">${plan.audience}</p>
       <ul class="plan-features">${plan.features.map(feature => `<li><i class="fa-solid fa-check" aria-hidden="true"></i><span>${feature}</span></li>`).join('')}</ul>
       <a class="theme-btn plan-cta" href="${contactUrl(line.id, tiers[index])}">Elegir ${tierNames[index]}<i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
