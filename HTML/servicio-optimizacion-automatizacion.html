@@ -158,21 +158,21 @@
 						<a href="planes.html#business">Business</a>
 						<a href="planes.html#enterprise">Enterprise</a>
 					</div>
-				</div>
-			</div>
 
-			<!-- Escalera de madurez -->
-			<div class="oa-box">
-				<div class="oa-head">
-					<span class="oa-kicker">Escalera de madurez</span>
-					<h3>¿Por dónde empiezo? Suba un escalón a la vez</h3>
-					<p>Primero ordenamos el proceso, luego lo automatizamos, conectamos sus sistemas y medimos los resultados. Puede empezar por el primer escalón e ir subiendo.</p>
-				</div>
-				<div class="oa-stairs">
-					<div class="oa-step s1"><i class="fa-solid fa-route"></i><strong>1. Ordenar</strong><span>Mejora de flujos de trabajo</span><em>Essential</em></div>
-					<div class="oa-step s2"><i class="fa-solid fa-robot"></i><strong>2. Automatizar</strong><span>Tareas repetitivas</span><em>Business</em></div>
-					<div class="oa-step s3"><i class="fa-solid fa-plug"></i><strong>3. Conectar</strong><span>Integraciones entre sistemas</span><em>Business</em></div>
-					<div class="oa-step s4"><i class="fa-solid fa-chart-line"></i><strong>4. Medir</strong><span>Tableros e indicadores</span><em>Enterprise</em></div>
+					<!-- Escalera de madurez -->
+					<div class="oa-box oa-box--side">
+						<div class="oa-head">
+							<span class="oa-kicker">Escalera de madurez</span>
+							<h3>¿Por dónde empiezo? Suba un escalón a la vez</h3>
+							<p>Primero ordenamos el proceso, luego lo automatizamos, conectamos sus sistemas y medimos los resultados.</p>
+						</div>
+						<div class="oa-stairs">
+							<div class="oa-step s1"><i class="fa-solid fa-route"></i><strong>1. Ordenar</strong><span>Mejora de flujos de trabajo</span><em>Essential</em></div>
+							<div class="oa-step s2"><i class="fa-solid fa-robot"></i><strong>2. Automatizar</strong><span>Tareas repetitivas</span><em>Business</em></div>
+							<div class="oa-step s3"><i class="fa-solid fa-plug"></i><strong>3. Conectar</strong><span>Integraciones entre sistemas</span><em>Business</em></div>
+							<div class="oa-step s4"><i class="fa-solid fa-chart-line"></i><strong>4. Medir</strong><span>Tableros e indicadores</span><em>Enterprise</em></div>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -215,6 +215,19 @@
 	.oa-step strong{color:#fff;font-size:19px}
 	.oa-step span{color:#b9b9c3;font-size:15px;line-height:1.4}
 	.oa-step em{font-style:normal;font-size:12px;color:#ff2d55;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-top:6px}
+	.oa-box--side{margin-top:36px;padding:30px 24px}
+	.oa-box--side .oa-head{margin-bottom:22px}
+	.oa-box--side .oa-head h3{font-size:22px}
+	.oa-box--side .oa-head p{font-size:15px;line-height:1.5;margin:0}
+	.oa-box--side .oa-stairs{gap:10px}
+	.oa-box--side .oa-step{padding:14px 12px;min-width:0}
+	.oa-box--side .oa-step.s1{min-height:150px}.oa-box--side .oa-step.s2{min-height:185px}.oa-box--side .oa-step.s3{min-height:220px}.oa-box--side .oa-step.s4{min-height:255px}
+	.oa-box--side .oa-step i{font-size:20px}
+	.oa-box--side .oa-step strong{font-size:15px;line-height:1.25;overflow-wrap:anywhere}
+	.oa-box--side .oa-step span{font-size:13px;line-height:1.35}
+	.oa-box--side .oa-step em{font-size:11px}
+	@media (min-width:992px) and (max-width:1199px){.oa-box--side .oa-stairs{grid-template-columns:1fr 1fr}.oa-box--side .oa-step{min-height:0!important}}
+	@media (max-width:991px){.oa-box--side .oa-step{min-height:0!important}}
 	.oa-calc{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
 	.oa-controls label{display:block;color:#e9e9ee;margin-bottom:22px}
 	.oa-controls b{color:#ff2d55}
