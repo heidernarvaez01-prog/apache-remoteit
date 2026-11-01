@@ -61,6 +61,11 @@
 	/* #000000 in decimal RGB */
 	--black-color:rgb(0,0,0);
 	--black-color-rgb:0,0,0;
+	/* Accessible dark service surfaces and feedback. */
+	--service-surface:rgb(28,28,36);
+	--service-muted:rgb(205,205,215);
+	--service-border:rgb(126,126,140);
+	--service-accent:rgb(255,143,165);
 
 }
 

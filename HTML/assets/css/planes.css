@@ -13,7 +13,7 @@
 .plan-card--selected{outline:2px solid var(--white-color);outline-offset:4px}
 .plan-badge-space{min-height:30px;margin-bottom:14px}
 .plan-badge{display:inline-flex;gap:7px;align-items:center;background:var(--main-color);color:var(--white-color);font-size:13px;font-weight:600;padding:4px 12px;border-radius:4px}
-.plan-card h3{font-size:28px;line-height:1.3;margin-bottom:22px}
+.plan-card h3{color:var(--white-color);font-size:28px;line-height:1.3;margin-bottom:22px;letter-spacing:0}
 .plan-price-label{font-size:14px;color:rgba(var(--white-color-rgb),.65)}
 .plan-price{display:flex;align-items:baseline;gap:8px;margin:4px 0 20px;flex-wrap:wrap}
 .plan-price strong{font-size:38px;line-height:1.2;font-weight:600}
