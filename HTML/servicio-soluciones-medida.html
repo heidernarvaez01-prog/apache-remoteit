@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <title>Apache IT Solutions | Soluciones a la Medida</title>
@@ -16,7 +16,7 @@
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
@@ -125,6 +125,7 @@
 	<!-- End Main Header -->
 	
 	<!-- Single Work -->
+	<main id="contenido">
 	<section class="single-work">
 		<div class="auto-container">
 			<div class="row clearfix">
@@ -139,7 +140,7 @@
 				</div>
 				<!-- Column -->
 				<div class="column col-lg-6 col-md-12 col-sm-12">
-					<h2 class="single-work_title">Soluciones a la Medida</h2>
+					<h1 class="single-work_title">Soluciones a la Medida</h1>
 					<p>Desarrollamos herramientas internas, resolvemos fallas complejas y gestionamos proyectos tecnológicos especiales de principio a fin.</p>
 					<p>Convierte necesidades específicas de su negocio en soluciones tecnológicas propias.</p>
 					<ul class="single-work_list">
@@ -203,92 +204,99 @@
 
 			<div class="sm-head" id="reto"><span class="sm-kicker">Cuéntenos su reto</span><h3>Tres respuestas y le decimos qué servicio le aplica</h3></div>
 			<form class="sm-form" id="sm-form">
-				<p class="sm-q">¿Qué necesita?</p>
-				<div class="sm-opts" data-name="need">
-					<button type="button" data-v="1">Arreglar algo que falla</button>
-					<button type="button" data-v="2">Una herramienta nueva</button>
-					<button type="button" data-v="3">Migrar o conectar sistemas</button>
-				</div>
-				<p class="sm-q">¿Qué tan urgente es?</p>
-				<div class="sm-opts" data-name="urg">
-					<button type="button" data-v="Urgente (esta semana)">Esta semana</button>
-					<button type="button" data-v="Este mes">Este mes</button>
-					<button type="button" data-v="Sin prisa">Sin prisa</button>
-				</div>
-				<p class="sm-q">Descríbalo en una frase</p>
-				<input type="text" id="sm-desc" maxlength="200" placeholder="Ej.: el sistema de facturación se cae todos los lunes" required>
+				<fieldset><legend class="sm-q">¿Qué necesita? (obligatorio)</legend>
+				<div class="sm-opts">
+					<label><input type="radio" name="need" value="1" required><span>Arreglar algo que falla</span></label>
+					<label><input type="radio" name="need" value="2" required><span>Una herramienta nueva</span></label>
+					<label><input type="radio" name="need" value="3" required><span>Migrar o conectar sistemas</span></label>
+				</div></fieldset>
+				<fieldset><legend class="sm-q">¿Qué tan urgente es? (obligatorio)</legend>
+				<div class="sm-opts">
+					<label><input type="radio" name="urg" value="Urgente (esta semana)" required><span>Esta semana</span></label>
+					<label><input type="radio" name="urg" value="Este mes" required><span>Este mes</span></label>
+					<label><input type="radio" name="urg" value="Sin prisa" required><span>Sin prisa</span></label>
+				</div></fieldset>
+				<label class="sm-q" for="sm-desc">Descríbalo en una frase (obligatorio)</label>
+				<input type="text" id="sm-desc" name="descripcion" maxlength="200" placeholder="Ej.: la facturación se cae los lunes" required>
 				<div class="sm-row">
-					<input type="text" id="sm-name" maxlength="80" placeholder="Su nombre" required>
-					<input type="email" id="sm-email" maxlength="120" placeholder="Su correo" required>
+					<div><label class="sm-q" for="sm-name">Nombre (obligatorio)</label><input type="text" id="sm-name" name="nombre" autocomplete="name" maxlength="80" required></div>
+					<div><label class="sm-q" for="sm-email">Correo electrónico (obligatorio)</label><input type="email" id="sm-email" name="email" autocomplete="email" maxlength="120" required></div>
 				</div>
-				<button type="submit" class="sm-send">Enviar mi reto</button>
-				<p class="sm-msg" id="sm-msg"></p>
-				<div class="sm-result" id="sm-result"></div>
+				<button type="submit" class="theme-btn sm-send">Enviar mi reto</button>
+				<p class="sm-msg" id="sm-msg" role="status" aria-live="polite" aria-atomic="true"></p>
+				<div class="sm-result" id="sm-result" role="status" aria-live="polite" aria-atomic="true"></div>
 			</form>
 		</div>
 	</section>
 	<style>
-	.sm-wrap{background:#0e0e12;color:#e9e9ee;padding:80px 0}
+	.sm-wrap{background:var(--color-four);color:var(--white-color);padding:80px 0}
 	.sm-head{text-align:center;margin:0 auto 32px;max-width:720px}
 	.sm-head:not(:first-child){margin-top:70px}
-	.sm-kicker{color:#ff2d55;text-transform:uppercase;letter-spacing:2px;font-size:13px;font-weight:600}
-	.sm-head h3{color:#fff;margin-top:8px;font-size:30px;line-height:1.25}
+	.sm-kicker{color:var(--service-accent);text-transform:uppercase;letter-spacing:0;font-size:13px;font-weight:600}
+	.sm-head h2{color:var(--white-color);margin-top:8px;font-size:30px;line-height:1.25}
 	.sm-doors{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-	.sm-door{background:#1c1c24;border:1px solid #34343f;border-radius:18px;padding:32px 26px;transition:.3s}
-	.sm-door:hover,.sm-door.hit{border-color:#ff2d55;transform:translateY(-4px)}
-	.sm-ico{width:56px;height:56px;border-radius:50%;background:rgba(255,45,85,.15);color:#ff2d55;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:18px}
-	.sm-quote{font-family:Lora,serif;font-style:italic;font-size:22px;line-height:1.35;color:#fff;margin-bottom:14px}
-	.sm-door h4{color:#ff2d55;font-size:16px;line-height:1.4;margin-bottom:10px}
-	.sm-get{color:#bdbdc7;font-size:15px;line-height:1.55;margin:0}
-	.sm-get strong{color:#fff}
+	.sm-door{background:var(--service-surface);border:1px solid var(--service-border);border-radius:8px;padding:32px 26px;transition:.3s}
+	.sm-door.hit{border-color:var(--service-accent);border-width:2px}
+	.sm-ico{width:56px;height:56px;border-radius:50%;background:var(--color-three);color:var(--service-accent);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:18px}
+	.sm-quote{font-family:Lora,serif;font-style:italic;font-size:22px;line-height:1.35;color:var(--white-color);margin-bottom:14px}
+	.sm-door h3{color:var(--service-accent);font-size:16px;line-height:1.4;margin-bottom:10px}
+	.sm-get{color:var(--service-muted);font-size:15px;line-height:1.65;margin:0}
+	.sm-get strong{color:var(--white-color)}
 	.sm-modes{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-	.sm-mode{background:#1c1c24;border-radius:18px;padding:30px;border-top:3px solid #ff2d55}
-	.sm-mode h4{color:#fff;font-size:20px;margin-bottom:10px}
-	.sm-mode h4 i{color:#ff2d55;margin-right:8px}
-	.sm-mode p{color:#bdbdc7}
+	.sm-mode{background:var(--service-surface);border-radius:8px;padding:30px;border-top:3px solid var(--service-accent)}
+	.sm-mode h3{color:var(--white-color);font-size:20px;margin-bottom:10px}
+	.sm-mode h3 i{color:var(--service-accent);margin-right:8px}
+	.sm-mode p{color:var(--service-muted)}
 	.sm-mode ul{margin:12px 0 0;padding:0;list-style:none}
-	.sm-mode li{color:#e9e9ee;padding:6px 0 6px 24px;position:relative}
-	.sm-mode li:before{content:"✓";color:#ff2d55;position:absolute;left:0}
-	.sm-form{max-width:760px;margin:0 auto;background:#1c1c24;border-radius:18px;padding:32px}
-	.sm-q{color:#fff;font-weight:600;margin:0 0 10px}
+	.sm-mode li{color:var(--white-color);padding:6px 0 6px 24px;position:relative}
+	.sm-mode li:before{content:"✓";color:var(--service-accent);position:absolute;left:0}
+	.sm-form{max-width:760px;margin:0 auto;padding:32px 0}
+	.sm-q{display:block;float:none;width:auto;color:var(--white-color);font-size:16px;font-weight:600;line-height:1.5;margin:0 0 10px}
 	.sm-opts{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
-	.sm-opts button{background:transparent;border:1px solid #3a3a45;color:#e9e9ee;border-radius:30px;padding:9px 18px;font-size:14px;cursor:pointer}
-	.sm-opts button.on{background:#ff2d55;border-color:#ff2d55;color:#fff}
-	.sm-form input{width:100%;background:#0e0e12;border:1px solid #3a3a45;border-radius:10px;color:#fff;padding:12px 14px;margin-bottom:14px}
+	.sm-opts label{display:flex;align-items:center;gap:10px;min-height:48px;background:var(--service-surface);border:1px solid var(--service-border);color:var(--white-color);border-radius:8px;padding:12px 16px;font-size:15px;line-height:1.5;cursor:pointer}
+	.sm-opts label:has(:checked){background:var(--main-color);border-color:var(--service-accent)}
+	.sm-opts label:has(:focus-visible){outline:3px solid var(--white-color);outline-offset:4px}
+	.sm-form input:not([type=radio]){width:100%;min-height:48px;background:var(--service-surface);border:1px solid var(--service-border);border-radius:8px;color:var(--white-color);font-size:16px;padding:12px 14px;margin-bottom:20px}
+	.sm-form input[type=radio]{appearance:auto;width:20px;height:20px;flex-shrink:0;accent-color:var(--main-color)}
+	.sm-form input::placeholder{color:var(--service-muted);opacity:1}
+	main :is(input,button,a):focus-visible{outline:3px solid var(--white-color)!important;outline-offset:4px}
+	.svc-plans a{display:inline-flex;align-items:center;min-height:44px}
+	.sm-wrap :is(p,li,h2,h3,span,label){overflow-wrap:anywhere;letter-spacing:0}
 	.sm-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-	.sm-send{background:#ff2d55;color:#fff;border:0;border-radius:30px;padding:13px 28px;font-weight:600;cursor:pointer}
-	.sm-msg{margin:12px 0 0;color:#ff8fa5;min-height:1em}
-	.sm-result{display:none;margin-top:16px;padding:20px;border-radius:14px;background:rgba(255,45,85,.1);border:1px solid #ff2d55;color:#fff}
+	.sm-send.theme-btn{background:var(--main-color);color:var(--white-color);border:0;border-radius:8px;padding:13px 28px;min-height:48px;font-weight:600;letter-spacing:0;cursor:pointer}
+	.sm-send:disabled{cursor:wait}
+	.sm-msg{margin:12px 0 0;color:var(--service-accent);min-height:1em}
+	.sm-result{display:none;margin-top:16px;padding:20px;border-radius:8px;background:var(--service-surface);border:1px solid var(--service-accent);color:var(--white-color)}
 	@media (max-width:991px){.sm-doors{grid-template-columns:1fr;gap:18px}.sm-modes{grid-template-columns:1fr;gap:18px}.sm-door{padding:26px 22px}.sm-quote{font-size:20px}.sm-head:not(:first-child){margin-top:52px}}
-	@media (max-width:575px){.sm-wrap{padding:56px 0}.sm-head{margin-bottom:24px}.sm-head h3{font-size:24px}.sm-row{grid-template-columns:1fr}.sm-form{padding:22px 18px}.sm-opts{flex-direction:column;gap:8px}.sm-opts button{width:100%;padding:12px 18px;font-size:15px;text-align:center}.sm-form input{font-size:16px;padding:14px}.sm-send{width:100%;padding:15px 28px;font-size:16px}.sm-mode{padding:24px 20px}.sm-mode h4{font-size:18px}.sm-ico{width:48px;height:48px;font-size:19px;margin-bottom:14px}}
+	@media (max-width:575px){.sm-wrap{padding:56px 0}.sm-head{margin-bottom:24px}.sm-head h2{font-size:24px}.sm-row{grid-template-columns:1fr;gap:0}.sm-form{padding:22px 4px}.sm-opts{flex-direction:column;gap:10px}.sm-opts label{width:100%}.sm-send.theme-btn{width:100%;padding:15px 28px;font-size:16px}.sm-mode{padding:24px 20px}.sm-mode h3{font-size:18px}.sm-ico{width:48px;height:48px;font-size:19px;margin-bottom:14px}}
+	@media(prefers-reduced-motion:reduce){.sm-door{transition:none}}
 	</style>
 	<script>
 	(function(){
-		var sel={}, names={1:'Corrección de fallas complejas',2:'Desarrollo de herramientas internas',3:'Proyectos especiales, migraciones e integración'};
-		document.querySelectorAll('.sm-opts').forEach(function(g){
-			g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
-				g.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');sel[g.dataset.name]=b.dataset.v;});
-		});
+		var names={1:'Corrección de fallas complejas',2:'Desarrollo de herramientas internas',3:'Proyectos especiales, migraciones e integración'};
 		var f=document.getElementById('sm-form'),msg=document.getElementById('sm-msg'),res=document.getElementById('sm-result');
 		f.addEventListener('submit',function(e){e.preventDefault();
-			if(!sel.need||!sel.urg){msg.textContent='Elija qué necesita y qué tan urgente es.';return;}
+			var data=new FormData(f),sel={need:data.get('need'),urg:data.get('urg')},send=f.querySelector('[type=submit]');
+			if(!sel.need||!sel.urg)return;
+			send.disabled=true;f.setAttribute('aria-busy','true');res.style.display='none';res.textContent='';
 			msg.textContent='Enviando…';
 			var svc=names[sel.need];
 			fetch('https://n8n-huou.srv1971812.hstgr.cloud/webhook/f55ec2d4-3af7-4983-95a3-530c3ccf3c4d',{method:'POST',headers:{'Content-Type':'application/json'},
 				body:JSON.stringify({nombre:document.getElementById('sm-name').value.trim(),email:document.getElementById('sm-email').value.trim(),telefono:'',
 				asunto:'Reto a la medida: '+svc+' · '+sel.urg,mensaje:document.getElementById('sm-desc').value.trim(),origen:'Soluciones a la Medida - Cuéntenos su reto',fecha:new Date().toISOString()})})
-			.then(function(r){if(!r.ok)throw 0;msg.textContent='';})
-			.catch(function(){msg.textContent='No pudimos enviarlo. Intente de nuevo o escríbanos desde Contacto.';})
-			.finally(function(){
+			.then(function(r){if(!r.ok)throw 0;msg.textContent='Reto enviado correctamente.';
 				document.querySelectorAll('.sm-door').forEach(function(d){d.classList.remove('hit')});
 				document.getElementById('sm-d'+sel.need).classList.add('hit');
 				res.style.display='block';
 				res.innerHTML='<strong>Su servicio: '+svc+'</strong><br>Urgencia: '+sel.urg+'. Le escribiremos pronto con los siguientes pasos.';
-			});
+			})
+			.catch(function(){msg.textContent='No pudimos enviarlo. Intente de nuevo o escríbanos desde Contacto.';})
+			.finally(function(){send.disabled=false;f.removeAttribute('aria-busy');});
 		});
 	})();
 	</script>
 	<!-- End Single Work -->
+	</main>
 	
 	<!-- Main Footer -->
 	<footer class="main-footer">
